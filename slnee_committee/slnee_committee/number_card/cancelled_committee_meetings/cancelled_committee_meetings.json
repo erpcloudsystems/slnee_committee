@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2021-06-20 17:27:40.646896",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Committee Meeting",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Committee Meeting\",\"docstatus\",\"=\",\"2\",false]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Cancelled Committee Meetings",
+ "modified": "2021-06-20 17:28:12.463978",
+ "modified_by": "Administrator",
+ "module": "Slnee Committee",
+ "name": "Cancelled Committee Meetings",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

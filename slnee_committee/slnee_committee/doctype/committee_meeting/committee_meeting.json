@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-06-20 15:15:29.305796",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "requests_table_section",
+  "requests_table",
+  "meeting_details_section",
+  "meeting_date",
+  "meeting_time",
+  "column_break_6",
+  "meeting_location",
+  "attended_members_section",
+  "committee",
+  "committee_members",
+  "add_decision_section",
+  "meeting_record",
+  "committee_recommendations",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "requests_table",
+   "fieldtype": "Table",
+   "label": "Requests Preview",
+   "options": "Requests Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Committee Meeting",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "requests_table_section",
+   "fieldtype": "Section Break",
+   "label": "Requests Preview"
+  },
+  {
+   "fieldname": "meeting_details_section",
+   "fieldtype": "Section Break",
+   "label": "Meeting Details"
+  },
+  {
+   "fieldname": "meeting_location",
+   "fieldtype": "Data",
+   "label": "Meeting Location",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "meeting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Meeting Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "meeting_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Meeting Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "committee",
+   "fieldtype": "Link",
+   "label": "Committee",
+   "options": "Committee"
+  },
+  {
+   "fieldname": "committee_members",
+   "fieldtype": "Table",
+   "label": "Committee Members",
+   "options": "Committee Members"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attended_members_section",
+   "fieldtype": "Section Break",
+   "label": "Attended Members"
+  },
+  {
+   "depends_on": "eval:doc.docstatus == 1",
+   "fieldname": "add_decision_section",
+   "fieldtype": "Section Break",
+   "label": "Add Decision"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "meeting_record",
+   "fieldtype": "Attach",
+   "label": "Meeting Record"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "committee_recommendations",
+   "fieldtype": "Text Editor",
+   "label": "Committee Recommendations"
+  },
+  {
+   "default": "C.MEET-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "C.MEET-",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-06-27 03:02:48.633511",
+ "modified_by": "Administrator",
+ "module": "Slnee Committee",
+ "name": "Committee Meeting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

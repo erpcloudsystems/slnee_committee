@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2021-06-19 14:48:28.211362",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_type",
+  "employee_code",
+  "name1",
+  "column_break_4",
+  "entity_name",
+  "email",
+  "role_level"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "member_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nInternal\nExternal"
+  },
+  {
+   "columns": 2,
+   "depends_on": "eval:doc.member_type == \"Internal\"",
+   "fieldname": "employee_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee Code",
+   "options": "Employee"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee_code.employee_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "read_only_depends_on": "eval:doc.member_type == \"Internal\""
+  },
+  {
+   "columns": 1,
+   "fetch_from": "employee_code.department",
+   "fieldname": "entity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Entity",
+   "read_only_depends_on": "eval:doc.member_type == \"Internal\""
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee_code.personal_email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "read_only_depends_on": "eval:doc.member_type == \"Internal\""
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "default": "Main Member",
+   "fieldname": "role_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Role Level",
+   "options": "Committee President\nMain Member\nReserve Member\nCommittee Secretary"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-06-26 21:06:17.809020",
+ "modified_by": "Administrator",
+ "module": "Slnee Committee",
+ "name": "Committee Members",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

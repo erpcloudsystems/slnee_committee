@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-06-17 15:28:13.680732",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "committee_details_section",
+  "committee_name",
+  "formation_date",
+  "membership_duration",
+  "no_of_membership_years",
+  "column_break_6",
+  "committee_duties",
+  "section_break_8",
+  "committee_members"
+ ],
+ "fields": [
+  {
+   "default": "COM-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "COM-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "committee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Committee Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership_duration",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Membership Duration",
+   "options": "Temporary\nPermanent\nYears"
+  },
+  {
+   "depends_on": "eval:doc.membership_duration == \"Years\"",
+   "fieldname": "no_of_membership_years",
+   "fieldtype": "Int",
+   "label": "No. Of Membership Years",
+   "mandatory_depends_on": "eval:doc.membership_duration == \"Years\""
+  },
+  {
+   "fieldname": "committee_duties",
+   "fieldtype": "Table",
+   "label": "Committee Duties & Responsibilities",
+   "options": "Committee Duties",
+   "reqd": 1
+  },
+  {
+   "fieldname": "committee_members",
+   "fieldtype": "Table",
+   "label": "Committee Members",
+   "options": "Committee Members",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "formation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Formation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Committee Members"
+  },
+  {
+   "fieldname": "committee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Committee Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Communication With Committee",
+   "link_fieldname": "committee"
+  }
+ ],
+ "modified": "2021-06-26 21:08:51.419214",
+ "modified_by": "Administrator",
+ "module": "Slnee Committee",
+ "name": "Committee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "committee_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

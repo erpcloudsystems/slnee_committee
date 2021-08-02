@@ -1,0 +1,22 @@
+{
+ "creation": "2021-07-29 14:40:31.010991",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "{}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "No Of Unspecified Requests By Committees",
+ "modified": "2021-07-29 14:40:31.039762",
+ "modified_by": "Administrator",
+ "module": "Slnee Committee",
+ "name": "No Of Unspecified Requests By Committees",
+ "owner": "Administrator",
+ "report_field": "unspecified_requests",
+ "report_function": "Maximum",
+ "report_name": "Committee Requests Report",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

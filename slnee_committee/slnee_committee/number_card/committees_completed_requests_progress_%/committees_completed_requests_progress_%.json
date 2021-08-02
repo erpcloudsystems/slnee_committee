@@ -1,0 +1,23 @@
+{
+ "color": "#81cc00",
+ "creation": "2021-07-29 13:19:04.839342",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "{}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Committees Completed Requests Progress %",
+ "modified": "2021-07-29 14:58:57.766160",
+ "modified_by": "Administrator",
+ "module": "Slnee Committee",
+ "name": "Committees Completed Requests Progress %",
+ "owner": "Administrator",
+ "report_field": "completed_requests_progress",
+ "report_function": "Maximum",
+ "report_name": "Committee Requests Report",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

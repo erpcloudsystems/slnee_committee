@@ -25,6 +25,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Committee Members",
+   "link_to": "Members",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Committees",
    "link_to": "Committee",
    "link_type": "DocType",
@@ -50,12 +59,25 @@
    "type": "Link"
   }
  ],
- "modified": "2021-06-20 15:41:51.023547",
+ "modified": "2021-08-01 12:02:16.693795",
  "modified_by": "Administrator",
  "module": "Slnee Committee",
  "name": "Slnee Committee",
  "owner": "Administrator",
  "pin_to_bottom": 0,
  "pin_to_top": 0,
- "shortcuts": []
+ "shortcuts": [
+  {
+   "doc_view": "Dashboard",
+   "label": "Committees Dashboard",
+   "link_to": "Slnee Committee",
+   "type": "Dashboard"
+  },
+  {
+   "doc_view": "Dashboard",
+   "label": "His Highness Dashboard",
+   "link_to": "His Highness Dashboard",
+   "type": "Dashboard"
+  }
+ ]
 }

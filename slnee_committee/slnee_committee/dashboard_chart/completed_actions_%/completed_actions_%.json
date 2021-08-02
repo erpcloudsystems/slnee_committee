@@ -1,0 +1,36 @@
+{
+ "chart_name": "Completed Actions %",
+ "chart_type": "Report",
+ "creation": "2021-07-27 23:31:12.704807",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "dynamic_filters_json": "{}",
+ "filters_json": "{}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2021-07-28 20:06:48.660665",
+ "modified_by": "Administrator",
+ "module": "Slnee Committee",
+ "name": "Completed Actions %",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Committee Meeting Report",
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Pie",
+ "use_report_chart": 0,
+ "x_field": "request_no",
+ "y_axis": [
+  {
+   "color": "#29CD42",
+   "y_field": "completed_actions"
+  },
+  {
+   "color": "#ff0000",
+   "y_field": "action_taken"
+  }
+ ]
+}

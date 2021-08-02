@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-07-27 20:21:51.528403",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "member_type",
+  "employee_code",
+  "name1",
+  "column_break_4",
+  "entity_name",
+  "email",
+  "role_level"
+ ],
+ "fields": [
+  {
+   "default": "MEMBER-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "MEMBER-"
+  },
+  {
+   "columns": 1,
+   "fieldname": "member_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "\nInternal\nExternal"
+  },
+  {
+   "columns": 2,
+   "depends_on": "eval:doc.member_type == \"Internal\"",
+   "fieldname": "employee_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Code",
+   "options": "Employee"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee_code.employee_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name",
+   "read_only_depends_on": "eval:doc.member_type == \"Internal\"",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "employee_code.department",
+   "fieldname": "entity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Entity",
+   "read_only_depends_on": "eval:doc.member_type == \"Internal\""
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee_code.personal_email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Email",
+   "read_only_depends_on": "eval:doc.member_type == \"Internal\""
+  },
+  {
+   "columns": 2,
+   "default": "Main Member",
+   "fieldname": "role_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Role Level",
+   "options": "Committee President\nMain Member\nReserve Member\nCommittee Secretary"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-07-27 20:25:04.919920",
+ "modified_by": "Administrator",
+ "module": "Slnee Committee",
+ "name": "Members",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "name1",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

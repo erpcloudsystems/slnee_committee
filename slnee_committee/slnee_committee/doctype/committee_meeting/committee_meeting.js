@@ -1,6 +1,19 @@
 // Copyright (c) 2021, ERPCloud.Systems and contributors
 // For license information, please see license.txt
 
+frappe.ui.form.on('Committee Meeting',{
+    setup: function(frm) {
+		cur_frm.fields_dict['requests_table'].grid.get_field("request_no").get_query = function(doc, cdt, cdn)
+		{
+			return {
+				filters:  [
+					["Communication With Committee","workflow_state", "in", ["Escalated To Committee","Resent To Committee"]]
+				]
+
+			};
+		};
+	}
+});
 
 frappe.ui.form.on('Committee Meeting', {
     get_requests: function(frm) {

@@ -11,6 +11,6 @@ frappe.views.calendar['Committee Meeting'] = {
         allDay: "all_day",
         color: 'color'
     },
-    order_by: 'end',
+    order_by: 'meeting_date',
     get_events_method: 'slnee_committee.slnee_committee.doctype.committee_meeting.committee_meeting.calendar_view'
 }
